@@ -1,0 +1,27 @@
+<!DOCTYPE thml>
+<html lang="ja">
+<head>
+    <script src='https://unpkg.com/vue@2.4.2/dist/vue.js'></script>
+    <title>Webpack test</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{text}}</p>
+        <App></App>
+        <App2 inline-template>
+          <div class="message">
+            {{ message }}
+          </div>
+        </App2>
+      </div>
+</body>
+<script type="text/javascript" src="js/bundle.js"></script>
+<script>
+let vm = new Vue({
+    el: '#app',
+    data: {
+        text: "hello world"
+    }
+});
+</script>
+<html>
